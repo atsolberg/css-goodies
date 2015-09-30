@@ -1,0 +1,14 @@
+/*
+ * Styles for this demo app, not part of the css goodies styling.
+ */
+
+.grid-example .column {
+    padding: 10px;
+    background-color: #efefef;
+    min-height: 89px;
+}
+.grid-example .column .label {
+    margin: 2px 0;
+    display: inline-block;
+    line-height: 14px;
+}

@@ -1,0 +1,85 @@
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+
+/* COLORS
+---------------------------------------- */
+@primary-color: #5295d4;
+@font-color: #555;
+@visited-color: #04a;
+@content-background: white;
+@page-background: #fff;
+
+@red: #d14836;
+@green: #093;
+@light-green: #5cb85c;
+@blue: #1f4cff;
+@light-blue: #849ddf;
+@orange: #ec971f;
+
+@primary-button-color: #777;
+@primary-button-color-border: #444;
+@primary-button-color-hover: #888;
+
+/* MEASUREMENTS
+---------------------------------------- */
+@page-width: 930px;
+@border-radius: 2px;
+@form-control-height: 26px;
+
+
+
+/* ============================================================
+   MIXINS
+   ============================================================ */
+
+/*
+   GRADIENTS
+-----------------------------------------------------------*/
+
+.mix_2color-linear-gradient (@top-color; @bottom-color; @top-stop; @bottom-stop) {
+    background: @top-color; /* Old browsers */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@top-stop, @top-color), color-stop(@bottom-stop, @bottom-color)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @top-color @top-stop, @bottom-color @bottom-stop); /* Chrome10+,Safari5.1+ */
+    background:    -moz-linear-gradient(top, @top-color @top-stop, @bottom-color @bottom-stop); /* FF3.6+ */
+    background:     -ms-linear-gradient(top, @top-color @top-stop, @bottom-color @bottom-stop); /* IE10+ */
+    background:      -o-linear-gradient(top, @top-color @top-stop, @bottom-color @bottom-stop); /* Opera 11.10+ */
+    background:         linear-gradient(to bottom, @top-color @top-stop, @bottom-color @bottom-stop); /* W3C */
+    @c1: e(%("'%d'", @top-color)); // Need to wrap the colors in ' marks.
+    @c2: e(%("'%d'", @bottom-color));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@c1, endColorstr=@c2, GradientType=0); /* IE6-9 */
+}
+
+.mix_2-tone-bg (@top-color; @bottom-color) {
+    background: @top-color; /* Old browsers */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @top-color), color-stop(50%, @top-color), color-stop(51%, @bottom-color), color-stop(100%, @bottom-color)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @top-color 0%, @top-color 50%, @bottom-color 51%, @bottom-color 100%); /* Chrome10+,Safari5.1+ */
+    background:    -moz-linear-gradient(top, @top-color 0%, @top-color 50%, @bottom-color 51%, @bottom-color 100%); /* FF3.6+ */
+    background:     -ms-linear-gradient(top, @top-color 0%, @top-color 50%, @bottom-color 51%, @bottom-color 100%); /* IE10+ */
+    background:      -o-linear-gradient(top, @top-color 0%, @top-color 50%, @bottom-color 51%, @bottom-color 100%); /* Opera11.10+ */
+    background:         linear-gradient(top, @top-color 0%, @top-color 50%, @bottom-color 51%, @bottom-color 100%); /* W3C */
+    @c1: e(%("'%d'", @top-color)); // Need to wrap the colors in ' marks.
+    @c2: e(%("'%d'", @bottom-color));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@c1, endColorstr=@c2, GradientType=0); /* IE6-9 */
+}
+
+/*
+   UTILITIES
+-----------------------------------------------------------*/
+// http://nicolasgallagher.com/micro-clearfix-hack
+.clearfix() {
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after { clear: both; }
+}
+
+// Vertically center a block or inline-block container in a parent.
+// Parent must be positioned; usually 'position: relative;'.
+.vert-center() {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
