@@ -2,6 +2,7 @@
  * Styles for this demo app, not part of the css goodies styling.
  */
 
+.description { line-height: 22px; }
 .grid-example .column {
     padding: 10px;
     background-color: #efefef;

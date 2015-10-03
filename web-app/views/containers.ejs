@@ -1,3 +1,72 @@
 <% include header %>
 <h1>Containers</h1>
+
+<h2>Box Containers</h2>
+<div class="example section">
+    <div class="clearfix">
+        <div class="titled-container box-container clearfix ">
+            <div class="title-bar clearfix">
+                <h3 class="title">This is a Box Container</h3>
+                <div class="controls"><i class="icon show-hide"></i></div>
+            </div>
+            <div class="content clearfix">:D</div>
+        </div>
+        <span class="description">a normal box container</span>
+    </div>
+<pre class="code prettyprint">
+&lt;div class="titled-container box-container clearfix "&gt;
+    &lt;div class="title-bar clearfix"&gt;
+        &lt;h3 class="title"&gt;This is a Box Container&lt;/h3&gt;
+        &lt;div class="controls"&gt;&lt;i class="icon show-hide"&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content clearfix"&gt;:D&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<h2>Section Containers</h2>
+<div class="example section">
+    <div class="clearfix">
+        <div class="titled-container section-container clearfix">
+            <div class="title-bar clearfix">
+                <h3 class="title">This is a Section Container</h3>
+                <div class="controls"></div>
+            </div>
+            <div class="content clearfix">:D</div>
+        </div>
+        <span class="description">a normal section container</span>
+    </div>
+<pre class="code prettyprint">
+&lt;div class="titled-container section-container clearfix"&gt;
+    &lt;div class="title-bar clearfix"&gt;
+        &lt;h3 class="title"&gt;This is a Section Container&lt;/h3&gt;
+        &lt;div class="controls"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content clearfix"&gt;:D&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<h2>Containers Side by Side</h2>
+<div class="column-12-12">
+    <div class="column one">
+        <div class="titled-container box-container clearfix ">
+            <div class="title-bar clearfix">
+                <h3 class="title">This is a Box Container</h3>
+                <div class="controls"><i class="icon show-hide"></i></div>
+            </div>
+            <div class="content clearfix">:D</div>
+        </div>
+    </div>
+    <div class="column two nogutter">
+        <div class="titled-container section-container clearfix">
+            <div class="title-bar clearfix">
+                <h3 class="title">This is a Section Container</h3>
+                <div class="controls"></div>
+            </div>
+            <div class="content clearfix">:D</div>
+        </div>
+    </div>
+</div>
+
 <% include footer %>

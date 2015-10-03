@@ -1,3 +1,1541 @@
 <% include header %>
 <h1>Tables</h1>
+
+
+<p>
+    Four main table classes: <span class="label label-attr">.results-table</span>
+    <span class="label label-attr">.compact-results-table</span> <span class="label label-attr">.name-value-table</span>
+    <span class="label label-attr">.links-table</span>
+</p>
+
+<h2>Table Data</h2>
+<p>
+    Follow standard practices when organizing data in tables:
+    <a target="_blank" href="http://i.imgur.com/Jg6rgsr.gif">nifty example gif!</a>
+</p>
+<ul>
+    <li>Left align text.</li>
+    <li>Right align dates and numbers.</li>
+    <li>Align headers with data.</li>
+    <li>Use consistent rounding.</li>
+</ul>
+<h4 class="subtle">Example:</h4>
+<table class="half-width">
+    <thead>
+        <tr>
+            <th>State</th>
+            <th class="tar">Population</th>
+            <th class="tar">Established</th>
+        </tr>
+    </thead>
+    <tfoot></tfoot>
+    <tbody>
+        <tr>
+            <td>Minnesota</td>
+            <td class="tar">5.379M</td>
+            <td class="tar">May 11, 1858</td>
+        </tr>
+        <tr>
+            <td>Wisconsin</td>
+            <td class="tar">5.726M</td>
+            <td class="tar">May 29, 1848</td>
+        </tr>
+        <tr>
+            <td>Iowa</td>
+            <td class="tar">3.074M</td>
+            <td class="tar">December 28, 1846</td>
+        </tr>
+    </tbody>
+</table>
+<h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;State&lt;/th&gt;
+            &lt;th class=&quot;tar&quot;&gt;Population&lt;/th&gt;
+            &lt;th class=&quot;tar&quot;&gt;Established&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Minnesota&lt;/td&gt;
+            &lt;td class=&quot;tar&quot;&gt;5.379M&lt;/td&gt;
+            &lt;td class=&quot;tar&quot;&gt;May 11, 1858&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Wisconsin&lt;/td&gt;
+            &lt;td class=&quot;tar&quot;&gt;5.726M&lt;/td&gt;
+            &lt;td class=&quot;tar&quot;&gt;May 29, 1848&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Iowa&lt;/td&gt;
+            &lt;td class=&quot;tar&quot;&gt;3.074M&lt;/td&gt;
+            &lt;td class=&quot;tar&quot;&gt;December 28, 1846&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+<h2>Results Table</h2>
+<div class="table-example clearfix stacked">
+    <p class="description"><span class="label label-attr">.results-table</span> is used to display data when a bordered around the table is desired.
+    We usually do not want border tables so <span class="label label-attr">.compact-results-table</span> are preferred.
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="results-table">
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class=&quot;results-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+            &lt;th&gt;Header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<h2>Compact Results Table</h2>
+<div class="table-example clearfix stacked">
+    <p class="description"><span class="label label-attr">.compact-results-table</span> is the preffered table to use when
+    tabling data.  It has a font size 13px, down from the default 14px.</p>
+    <h4 class="subtle">Example:</h4>
+    <table class="compact-results-table">
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class=&quot;compact-results-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+            &lt;th&gt;Header 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+</div>
+<h3 class="subtle">Dashed Headers and Rows</h3>
+<div class="table-example clearfix stacked">
+    <p class="description">
+        Adding <span class="label label-attr">.dashed</span> to a 
+        <span class="label label-attr">.compact-results-table</span> will change the header border to a dashed line.  Use 
+        this when the table is inside a section container.
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="compact-results-table dashed">
+        <thead><tr><th>Shape</th><th>Forumla</th></tr></thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr>
+                <td>Circle</td>
+                <td>A = &pi; r<sup>2</sup></td>
+            </tr>
+            <tr>
+                <td>Square</td>
+                <td>A = a<sup>2</sup></td>
+            </tr>
+            <tr>
+                <td>Triangle</td>
+                <td>A = (h<sub>b</sub>b) / 2</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class=&quot;compact-results-table dashed&quot;&gt;
+    ...
+&lt;/table&gt;
+</pre>
+    
+    <hr>
+    
+    <p class="description">
+        Adding <span class="label label-attr">.separated</span> to a 
+        <span class="label label-attr">.compact-results-table</span> will add dashed borders between rows.
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="compact-results-table separated">
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class=&quot;compact-results-table separated&quot;&gt;
+...
+&lt;/table&gt;
+</pre>
+</div>
+
+<h2>Name Value Table</h2>
+<div class="table-example clearfix stacked">
+    <p class="description"><span class="label label-attr">.name-value-table</span> is a two column table used to display 
+    data that fits in pairs.  This table is often used in a form to label form fields.</p>
+    <h4 class="subtle">Example:</h4>
+    <table class="name-value-table natural-width">
+        <tr>
+            <td class="name">Circle</td>
+            <td class="value">A = &pi; r<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td class="name">Square</td>
+            <td class="value">A = a<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td class="name">Triangle</td>
+            <td class="value">A = (h<sub>b</sub>b) / 2</td>
+        </tr>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class=&quot;name-value-table natural-width&quot;&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;name&quot;&gt;Circle&lt;/td&gt;
+        &lt;td class=&quot;value&quot;&gt;A = &amp;pi; r&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;name&quot;&gt;Square&lt;/td&gt;
+        &lt;td class=&quot;value&quot;&gt;A = a&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;name&quot;&gt;Triangle&lt;/td&gt;
+        &lt;td class=&quot;value&quot;&gt;A = (h&lt;sub&gt;b&lt;/sub&gt;b) / 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<h2>Link Table</h2>
+<div class="table-example clearfix stacked">
+    <p class="description"><span class="label label-attr">.link-table</span> is used to hold of list a links and thier
+        descriptions.
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="link-table">
+        <tr>
+            <td><a href="grids">Style Guide: Grids</a></td>
+            <td>A page showing you how to use the grid system.</td>
+        </tr>
+        <tr>
+            <td><a href="buttons">Style Guide: Buttons</a></td>
+            <td>A page showing you how to create button elements.</td>
+        </tr>
+        <tr>
+            <td><a href="icons">Style Guide: Icons</a></td>
+            <td>A page listing all the icons and their class names.</td>
+        </tr>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class=&quot;link-table&quot;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&quot;grids&quot;&gt;Style Guide: Grids&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;A page showing you how to use the grid system.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&quot;buttons&quot;&gt;Style Guide: Buttons&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;A page showing you how to create button elements.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&quot;icons&quot;&gt;Style Guide: Icons&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;A page listing all the icons and their class names.&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<h2>Striping</h2>
+<div class="table-example clearfix stacked">
+    <p class="description">
+        <span class="label label-attr">.compact-results-table</span> and
+        <span class="label label-attr">.results-table</span> are striped by default.  Striping means every even row
+        has a slightly gray background.  You can add striping to other tables by adding the class 
+        <span class="label label-attr">.striped</span>.
+    </p>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class="name-value-table natural-width striped"&gt;
+    &lt;tr&gt;
+        &lt;td class="name"&gt;Circle&lt;/td&gt;
+        &lt;td class="value"&gt;A = &amp;pi; r&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="name"&gt;Square&lt;/td&gt;
+        &lt;td class="value"&gt;A = a&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="name"&gt;Triangle&lt;/td&gt;
+        &lt;td class="value"&gt;A = (h&lt;sub&gt;b&lt;/sub&gt;b) / 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+    
+    <hr>
+    
+    <p class="description">
+        You can turn striping off for <span class="label label-attr">.compact-results-table</span> and
+        <span class="label label-attr">.results-table</span> tables by using 
+        <span class="label label-attr">.manual-striping</span> or <span class="label label-attr">.no-stipes</span>.  
+        You can then add the striping back by using <span class="label label-attr">.alt-row</span> on rows you want 
+        striped.  This is useful when there are hidden rows that throw off the even/odd counting.
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="compact-results-table manual-striping">
+        <thead><tr><th>header 1</th><th>header 2</th></tr></thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr><td>visible</td><td>visible</td></tr>
+            <tr class="dn"><td>hidden</td><td>hidden</td></tr>
+            <tr class="alt-row"><td>visible</td><td>visible</td></tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class=&quot;compact-results-table manual-striping&quot;&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th&gt;header 1&lt;/th&gt;&lt;th&gt;header 2&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tfoot&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;visible&lt;/td&gt;&lt;td&gt;visible&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class=&quot;dn&quot;&gt;&lt;td&gt;hidden&lt;/td&gt;&lt;td&gt;hidden&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class=&quot;alt-row&quot;&gt;&lt;td&gt;visible&lt;/td&gt;&lt;td&gt;visible&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<h2 id="scrolling-example">Scrolling</h2>
+<div class="table-example clearfix stacked">
+    <p class="description">
+        Scrolling is done by wrapping the table in a container with one of three classnames:
+        <span class="label label-attr">.scroll-lg</span>, <span class="label label-attr">.scroll-md</span>,
+        <span class="label label-attr">.scroll-sm</span>.  Scrolling should be preffered over paging unless your
+        table will usually have more than 1000 items in it.
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <div class="scroll-md">
+        <table class="compact-results-table">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Population</th>
+                </tr>
+            </thead>
+            <tfoot></tfoot>
+            <tbody>
+                <tr>
+                    <td>Big Lake</td>
+                    <td>10247</td>
+                </tr>
+                <tr>
+                    <td>New Ulm</td>
+                    <td>13265</td>
+                </tr>
+                <tr>
+                    <td>St. Cloud</td>
+                    <td>65986</td>
+                </tr>
+                <tr>
+                    <td>Mahtomedi</td>
+                    <td>7883</td>
+                </tr>
+                <tr>
+                    <td>North Mankato</td>
+                    <td>13369</td>
+                </tr>
+                <tr>
+                    <td>Waite Park</td>
+                    <td>6680</td>
+                </tr>
+                <tr>
+                    <td>Oak Grove</td>
+                    <td>8112</td>
+                </tr>
+                <tr>
+                    <td>Cannon Falls</td>
+                    <td>4081</td>
+                </tr>
+                <tr>
+                    <td>Lonsdale</td>
+                    <td>3757</td>
+                </tr>
+                <tr>
+                    <td>New Hope</td>
+                    <td>20728</td>
+                </tr>
+                <tr>
+                    <td>Austin</td>
+                    <td>24800</td>
+                </tr>
+                <tr>
+                    <td>Plymouth</td>
+                    <td>72928</td>
+                </tr>
+                <tr>
+                    <td>Anoka</td>
+                    <td>17243</td>
+                </tr>
+                <tr>
+                    <td>Fairmont</td>
+                    <td>10463</td>
+                </tr>
+                <tr>
+                    <td>Le Sueur</td>
+                    <td>4029</td>
+                </tr>
+                <tr>
+                    <td>Pine City</td>
+                    <td>3083</td>
+                </tr>
+                <tr>
+                    <td>Vadnais Heights</td>
+                    <td>12764</td>
+                </tr>
+                <tr>
+                    <td>Mora</td>
+                    <td>3507</td>
+                </tr>
+                <tr>
+                    <td>Princeton</td>
+                    <td>4674</td>
+                </tr>
+                <tr>
+                    <td>Carver</td>
+                    <td>4037</td>
+                </tr>
+                <tr>
+                    <td>Hermantown</td>
+                    <td>9603</td>
+                </tr>
+                <tr>
+                    <td>Little Falls</td>
+                    <td>8288</td>
+                </tr>
+                <tr>
+                    <td>Edina</td>
+                    <td>49050</td>
+                </tr>
+                <tr>
+                    <td>Jordan</td>
+                    <td>5832</td>
+                </tr>
+                <tr>
+                    <td>St. Charles</td>
+                    <td>3699</td>
+                </tr>
+                <tr>
+                    <td>Medina</td>
+                    <td>5045</td>
+                </tr>
+                <tr>
+                    <td>Farmington</td>
+                    <td>21926</td>
+                </tr>
+                <tr>
+                    <td>Oak Park Heights</td>
+                    <td>4575</td>
+                </tr>
+                <tr>
+                    <td>Brooklyn Center</td>
+                    <td>30643</td>
+                </tr>
+                <tr>
+                    <td>Savage</td>
+                    <td>27959</td>
+                </tr>
+                <tr>
+                    <td>Bloomington</td>
+                    <td>86033</td>
+                </tr>
+                <tr>
+                    <td>Eagan</td>
+                    <td>64854</td>
+                </tr>
+                <tr>
+                    <td>Glencoe</td>
+                    <td>5562</td>
+                </tr>
+                <tr>
+                    <td>New Brighton</td>
+                    <td>21867</td>
+                </tr>
+                <tr>
+                    <td>St. Joseph</td>
+                    <td>6646</td>
+                </tr>
+                <tr>
+                    <td>Forest Lake</td>
+                    <td>18957</td>
+                </tr>
+                <tr>
+                    <td>Grand Rapids</td>
+                    <td>10916</td>
+                </tr>
+                <tr>
+                    <td>Park Rapids</td>
+                    <td>3681</td>
+                </tr>
+                <tr>
+                    <td>Newport</td>
+                    <td>3453</td>
+                </tr>
+                <tr>
+                    <td>Prior Lake</td>
+                    <td>23754</td>
+                </tr>
+                <tr>
+                    <td>Mankato</td>
+                    <td>40119</td>
+                </tr>
+                <tr>
+                    <td>Windom</td>
+                    <td>4606</td>
+                </tr>
+                <tr>
+                    <td>Kasson</td>
+                    <td>6006</td>
+                </tr>
+                <tr>
+                    <td>Redwood Falls</td>
+                    <td>5175</td>
+                </tr>
+                <tr>
+                    <td>Stillwater</td>
+                    <td>18542</td>
+                </tr>
+                <tr>
+                    <td>Delano</td>
+                    <td>5559</td>
+                </tr>
+                <tr>
+                    <td>Cottage Grove</td>
+                    <td>35181</td>
+                </tr>
+                <tr>
+                    <td>Maplewood</td>
+                    <td>39337</td>
+                </tr>
+                <tr>
+                    <td>Pine Island</td>
+                    <td>3297</td>
+                </tr>
+                <tr>
+                    <td>Victoria</td>
+                    <td>7805</td>
+                </tr>
+                <tr>
+                    <td>Centerville</td>
+                    <td>3838</td>
+                </tr>
+                <tr>
+                    <td>Hastings</td>
+                    <td>22321</td>
+                </tr>
+                <tr>
+                    <td>Benson</td>
+                    <td>3164</td>
+                </tr>
+                <tr>
+                    <td>Oakdale</td>
+                    <td>27726</td>
+                </tr>
+                <tr>
+                    <td>Rush City</td>
+                    <td>3065</td>
+                </tr>
+                <tr>
+                    <td>Bemidji</td>
+                    <td>13723</td>
+                </tr>
+                <tr>
+                    <td>Winona</td>
+                    <td>27944</td>
+                </tr>
+                <tr>
+                    <td>St. James</td>
+                    <td>4587</td>
+                </tr>
+                <tr>
+                    <td>Grant</td>
+                    <td>4126</td>
+                </tr>
+                <tr>
+                    <td>Maple Grove</td>
+                    <td>64420</td>
+                </tr>
+                <tr>
+                    <td>Fergus Falls</td>
+                    <td>13215</td>
+                </tr>
+                <tr>
+                    <td>Arden Hills</td>
+                    <td>9750</td>
+                </tr>
+                <tr>
+                    <td>Morris</td>
+                    <td>5277</td>
+                </tr>
+                <tr>
+                    <td>Crystal</td>
+                    <td>22524</td>
+                </tr>
+                <tr>
+                    <td>Lakeville</td>
+                    <td>57342</td>
+                </tr>
+                <tr>
+                    <td>Hugo</td>
+                    <td>13834</td>
+                </tr>
+                <tr>
+                    <td>Elko New Market</td>
+                    <td>4415</td>
+                </tr>
+                <tr>
+                    <td>Belle Plaine</td>
+                    <td>6804</td>
+                </tr>
+                <tr>
+                    <td>Moorhead</td>
+                    <td>39039</td>
+                </tr>
+                <tr>
+                    <td>St. Michael</td>
+                    <td>16765</td>
+                </tr>
+                <tr>
+                    <td>Cambridge</td>
+                    <td>8217</td>
+                </tr>
+                <tr>
+                    <td>Northfield</td>
+                    <td>20515</td>
+                </tr>
+                <tr>
+                    <td>St. Louis Park</td>
+                    <td>46362</td>
+                </tr>
+                <tr>
+                    <td>Lake City</td>
+                    <td>5005</td>
+                </tr>
+                <tr>
+                    <td>Breckenridge</td>
+                    <td>3387</td>
+                </tr>
+                <tr>
+                    <td>Litchfield</td>
+                    <td>6671</td>
+                </tr>
+                <tr>
+                    <td>Scandia</td>
+                    <td>3984</td>
+                </tr>
+                <tr>
+                    <td>Norwood Young America</td>
+                    <td>3583</td>
+                </tr>
+                <tr>
+                    <td>West St. Paul</td>
+                    <td>19708</td>
+                </tr>
+                <tr>
+                    <td>Luverne</td>
+                    <td>4680</td>
+                </tr>
+                <tr>
+                    <td>Chaska</td>
+                    <td>24074</td>
+                </tr>
+                <tr>
+                    <td>Watertown</td>
+                    <td>4239</td>
+                </tr>
+                <tr>
+                    <td>Melrose</td>
+                    <td>3601</td>
+                </tr>
+                <tr>
+                    <td>Albert Lea</td>
+                    <td>17898</td>
+                </tr>
+                <tr>
+                    <td>Corcoran</td>
+                    <td>5500</td>
+                </tr>
+                <tr>
+                    <td>Owatonna</td>
+                    <td>25421</td>
+                </tr>
+                <tr>
+                    <td>Elk River</td>
+                    <td>23273</td>
+                </tr>
+                <tr>
+                    <td>Hibbing</td>
+                    <td>16287</td>
+                </tr>
+                <tr>
+                    <td>St. Peter</td>
+                    <td>11427</td>
+                </tr>
+                <tr>
+                    <td>Lindstrom</td>
+                    <td>4408</td>
+                </tr>
+                <tr>
+                    <td>Saint Paul</td>
+                    <td>290770</td>
+                </tr>
+                <tr>
+                    <td>Becker</td>
+                    <td>4605</td>
+                </tr>
+                <tr>
+                    <td>Little Canada</td>
+                    <td>10008</td>
+                </tr>
+                <tr>
+                    <td>Ely</td>
+                    <td>3438</td>
+                </tr>
+                <tr>
+                    <td>Pipestone</td>
+                    <td>4196</td>
+                </tr>
+                <tr>
+                    <td>East Grand Forks</td>
+                    <td>8548</td>
+                </tr>
+                <tr>
+                    <td>Ham Lake</td>
+                    <td>15552</td>
+                </tr>
+                <tr>
+                    <td>Mounds View</td>
+                    <td>12407</td>
+                </tr>
+                <tr>
+                    <td>Brainerd</td>
+                    <td>13517</td>
+                </tr>
+                <tr>
+                    <td>Perham</td>
+                    <td>3010</td>
+                </tr>
+                <tr>
+                    <td>Thief River Falls</td>
+                    <td>8661</td>
+                </tr>
+                <tr>
+                    <td>Duluth</td>
+                    <td>86211</td>
+                </tr>
+                <tr>
+                    <td>White Bear Lake</td>
+                    <td>24311</td>
+                </tr>
+                <tr>
+                    <td>Sartell</td>
+                    <td>16183</td>
+                </tr>
+                <tr>
+                    <td>Dayton</td>
+                    <td>4833</td>
+                </tr>
+                <tr>
+                    <td>Bayport</td>
+                    <td>3605</td>
+                </tr>
+                <tr>
+                    <td>Chisago City</td>
+                    <td>4920</td>
+                </tr>
+                <tr>
+                    <td>Blaine</td>
+                    <td>59412</td>
+                </tr>
+                <tr>
+                    <td>Wayzata</td>
+                    <td>3777</td>
+                </tr>
+                <tr>
+                    <td>Buffalo</td>
+                    <td>15724</td>
+                </tr>
+                <tr>
+                    <td>Hutchinson</td>
+                    <td>13929</td>
+                </tr>
+                <tr>
+                    <td>Isanti</td>
+                    <td>5395</td>
+                </tr>
+                <tr>
+                    <td>St. Anthony</td>
+                    <td>8392</td>
+                </tr>
+                <tr>
+                    <td>Worthington</td>
+                    <td>12870</td>
+                </tr>
+                <tr>
+                    <td>East Bethel</td>
+                    <td>11596</td>
+                </tr>
+                <tr>
+                    <td>St. Augusta</td>
+                    <td>3431</td>
+                </tr>
+                <tr>
+                    <td>Alexandria</td>
+                    <td>11549</td>
+                </tr>
+                <tr>
+                    <td>Marshall</td>
+                    <td>13446</td>
+                </tr>
+                <tr>
+                    <td>Shoreview</td>
+                    <td>25628</td>
+                </tr>
+                <tr>
+                    <td>Albertville</td>
+                    <td>7172</td>
+                </tr>
+                <tr>
+                    <td>Shakopee</td>
+                    <td>38744</td>
+                </tr>
+                <tr>
+                    <td>Stewartville</td>
+                    <td>5991</td>
+                </tr>
+                <tr>
+                    <td>Red Wing</td>
+                    <td>16481</td>
+                </tr>
+                <tr>
+                    <td>Sauk Centre</td>
+                    <td>4322</td>
+                </tr>
+                <tr>
+                    <td>Sauk Rapids</td>
+                    <td>12965</td>
+                </tr>
+                <tr>
+                    <td>Ramsey</td>
+                    <td>24071</td>
+                </tr>
+                <tr>
+                    <td>Goodview</td>
+                    <td>4004</td>
+                </tr>
+                <tr>
+                    <td>Rogers</td>
+                    <td>11641</td>
+                </tr>
+                <tr>
+                    <td>Minneapolis</td>
+                    <td>392880</td>
+                </tr>
+                <tr>
+                    <td>Richfield</td>
+                    <td>36087</td>
+                </tr>
+                <tr>
+                    <td>Proctor</td>
+                    <td>3054</td>
+                </tr>
+                <tr>
+                    <td>Rosemount</td>
+                    <td>22420</td>
+                </tr>
+                <tr>
+                    <td>Spring Lake Park</td>
+                    <td>6448</td>
+                </tr>
+                <tr>
+                    <td>Hopkins</td>
+                    <td>17982</td>
+                </tr>
+                <tr>
+                    <td>St. Francis</td>
+                    <td>7312</td>
+                </tr>
+                <tr>
+                    <td>Shorewood</td>
+                    <td>7468</td>
+                </tr>
+                <tr>
+                    <td>South St. Paul</td>
+                    <td>20404</td>
+                </tr>
+                <tr>
+                    <td>St. Paul Park</td>
+                    <td>5324</td>
+                </tr>
+                <tr>
+                    <td>Brooklyn Park</td>
+                    <td>77752</td>
+                </tr>
+                <tr>
+                    <td>Minnetrista</td>
+                    <td>6681</td>
+                </tr>
+                <tr>
+                    <td>Chisholm</td>
+                    <td>5025</td>
+                </tr>
+                <tr>
+                    <td>Deephaven</td>
+                    <td>3718</td>
+                </tr>
+                <tr>
+                    <td>Lino Lakes</td>
+                    <td>20746</td>
+                </tr>
+                <tr>
+                    <td>North Branch</td>
+                    <td>10006</td>
+                </tr>
+                <tr>
+                    <td>Circle Pines</td>
+                    <td>4944</td>
+                </tr>
+                <tr>
+                    <td>Otsego</td>
+                    <td>14138</td>
+                </tr>
+                <tr>
+                    <td>Rockford</td>
+                    <td>4370</td>
+                </tr>
+                <tr>
+                    <td>Nowthen</td>
+                    <td>4500</td>
+                </tr>
+                <tr>
+                    <td>Burnsville</td>
+                    <td>61130</td>
+                </tr>
+                <tr>
+                    <td>Annandale</td>
+                    <td>3298</td>
+                </tr>
+                <tr>
+                    <td>Independence</td>
+                    <td>3610</td>
+                </tr>
+                <tr>
+                    <td>Sleepy Eye</td>
+                    <td>3524</td>
+                </tr>
+                <tr>
+                    <td>International Falls</td>
+                    <td>6357</td>
+                </tr>
+                <tr>
+                    <td>Cloquet</td>
+                    <td>12036</td>
+                </tr>
+                <tr>
+                    <td>Andover</td>
+                    <td>31200</td>
+                </tr>
+                <tr>
+                    <td>Mendota Heights</td>
+                    <td>11138</td>
+                </tr>
+                <tr>
+                    <td>Plainview</td>
+                    <td>3304</td>
+                </tr>
+                <tr>
+                    <td>Lake Elmo</td>
+                    <td>8106</td>
+                </tr>
+                <tr>
+                    <td>Waseca</td>
+                    <td>9434</td>
+                </tr>
+                <tr>
+                    <td>Eveleth</td>
+                    <td>3697</td>
+                </tr>
+                <tr>
+                    <td>Chanhassen</td>
+                    <td>23840</td>
+                </tr>
+                <tr>
+                    <td>Montevideo</td>
+                    <td>5247</td>
+                </tr>
+                <tr>
+                    <td>Wadena</td>
+                    <td>4090</td>
+                </tr>
+                <tr>
+                    <td>Faribault</td>
+                    <td>23394</td>
+                </tr>
+                <tr>
+                    <td>North Oaks</td>
+                    <td>4575</td>
+                </tr>
+                <tr>
+                    <td>Woodbury</td>
+                    <td>64496</td>
+                </tr>
+                <tr>
+                    <td>Baxter</td>
+                    <td>7700</td>
+                </tr>
+                <tr>
+                    <td>Monticello</td>
+                    <td>12964</td>
+                </tr>
+                <tr>
+                    <td>Golden Valley</td>
+                    <td>20776</td>
+                </tr>
+                <tr>
+                    <td>Blue Earth</td>
+                    <td>3283</td>
+                </tr>
+                <tr>
+                    <td>Zumbrota</td>
+                    <td>3293</td>
+                </tr>
+                <tr>
+                    <td>Willmar</td>
+                    <td>19674</td>
+                </tr>
+                <tr>
+                    <td>Wyoming</td>
+                    <td>7716</td>
+                </tr>
+                <tr>
+                    <td>Cold Spring</td>
+                    <td>4027</td>
+                </tr>
+                <tr>
+                    <td>La Crescent</td>
+                    <td>4816</td>
+                </tr>
+                <tr>
+                    <td>Rochester</td>
+                    <td>108992</td>
+                </tr>
+                <tr>
+                    <td>Long Prairie</td>
+                    <td>3409</td>
+                </tr>
+                <tr>
+                    <td>Zimmerman</td>
+                    <td>5246</td>
+                </tr>
+                <tr>
+                    <td>Coon Rapids</td>
+                    <td>61931</td>
+                </tr>
+                <tr>
+                    <td>Minnetonka</td>
+                    <td>51123</td>
+                </tr>
+                <tr>
+                    <td>Crookston</td>
+                    <td>7844</td>
+                </tr>
+                <tr>
+                    <td>New Prague</td>
+                    <td>7428</td>
+                </tr>
+                <tr>
+                    <td>Robbinsdale</td>
+                    <td>14263</td>
+                </tr>
+                <tr>
+                    <td>Champlin</td>
+                    <td>23694</td>
+                </tr>
+                <tr>
+                    <td>Fridley</td>
+                    <td>27639</td>
+                </tr>
+                <tr>
+                    <td>Columbia Heights</td>
+                    <td>19667</td>
+                </tr>
+                <tr>
+                    <td>Eden Prairie</td>
+                    <td>62258</td>
+                </tr>
+                <tr>
+                    <td>North St. Paul</td>
+                    <td>11694</td>
+                </tr>
+                <tr>
+                    <td>Orono</td>
+                    <td>7720</td>
+                </tr>
+                <tr>
+                    <td>Mound</td>
+                    <td>9238</td>
+                </tr>
+                <tr>
+                    <td>Virginia</td>
+                    <td>8645</td>
+                </tr>
+                <tr>
+                    <td>Inver Grove Heights</td>
+                    <td>34198</td>
+                </tr>
+                <tr>
+                    <td>Jackson</td>
+                    <td>3307</td>
+                </tr>
+                <tr>
+                    <td>Columbus</td>
+                    <td>3949</td>
+                </tr>
+                <tr>
+                    <td>Apple Valley</td>
+                    <td>49978</td>
+                </tr>
+                <tr>
+                    <td>Detroit Lakes</td>
+                    <td>8812</td>
+                </tr>
+                <tr>
+                    <td>Roseville</td>
+                    <td>34666</td>
+                </tr>
+                <tr>
+                    <td>Dilworth</td>
+                    <td>4091</td>
+                </tr>
+                <tr>
+                    <td>Falcon Heights</td>
+                    <td>5443</td>
+                </tr>
+                <tr>
+                    <td>Waconia</td>
+                    <td>11222</td>
+                </tr>
+                <tr>
+                    <td>Byron</td>
+                    <td>4995</td>
+                </tr>
+                <tr>
+                    <td>Two Harbors</td>
+                    <td>3692</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;div class=&quot;scroll-md&quot;&gt;
+    &lt;table class=&quot;compact-results-table&quot;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;City&lt;/th&gt;
+                &lt;th&gt;Population&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tfoot&gt;&lt;/tfoot&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;&lt;td&gt;Big Lake&lt;/td&gt;&lt;td&gt;10247&lt;/td&gt;&lt;/tr&gt;
+            ...
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<h2>Sizing</h2>
+<div class="table-example clearfix stacked">
+    <p class="description">
+        <span class="label label-attr">.natural-width</span> will change a table's width from the
+        default <em>100%</em> to <em>auto</em>.
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="compact-results-table natural-width">
+        <thead><tr><th>header</th><th>header</th></tr></thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr><td>cell</td><td>cell</td></tr>
+            <tr><td>cell</td><td>cell</td></tr>
+            <tr><td>cell</td><td>cell</td></tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class=&quot;compact-results-table natural-width&quot;&gt;
+    ...
+&lt;/table&gt;
+</pre>
+    
+<h2>Misc</h2>
+<div class="table-example clearfix stacked">
+
+    <p class="description">
+        <span class="label label-attr">.with-form-controls</span> is used on tables that will have buttons or text-fields
+        or other similar form controls. Those components have a height of 26px so adding this class will change the 
+        line-height to 26px which centers any text vertically to match the form control. Use
+        <span class="label label-attr">.form-control</span> to get the same behavior for non-table elements. Note that if 
+        you are using <span class="label label-attr">&lt;label&gt;</span> html elements they will vertically center text on what 
+        they are labeling so this class is not necessary.  The easiest way to use 
+        <span class="label label-attr">&lt;label&gt;</span> is to wrap the text and the form control inside a 
+        <span class="label label-attr">&lt;label&gt;</span> element. 
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="name-value-table with-form-controls natural-width">
+        <thead></thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr>
+                <td class="name">Name:</td>
+                <td class="value">
+                    <button type="button" class="button m0">
+                        <span class="b-label">Edit</span>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="name">Type:</td>
+                <td class="value"><select><option>Option 1</option></select></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class="name-value-table with-form-controls natural-width"&gt;
+    &lt;thead&gt;&lt;/thead&gt;
+    &lt;tfoot&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class="name"&gt;Name:&lt;/td&gt;
+            &lt;td class="value"&gt;
+                &lt;button type="button" class="button m0"&gt;
+                &lt;span class="b-label"&gt;Edit&lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class="name"&gt;Type:&lt;/td&gt;
+            &lt;td class="value"&gt;
+                &lt;select&gt;
+                    &lt;option&gt;Option 1&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+    
+    <hr>
+    
+    <p class="description">
+        <span class="label label-attr">.row-highlighting</span> will produce row highlighting when hovering. 
+        Do <strong>NOT</strong> use this unless instructed to.  The built in row striping is usually enough to help users
+        horizontally scan long rows.
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="compact-results-table row-highlighting">
+        <thead><tr><th>header</th><th>header</th><th>header</th></tr></thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr><td>cell</td><td>cell</td><td>cell</td></tr>
+            <tr><td>cell</td><td>cell</td><td>cell</td></tr>
+            <tr><td>cell</td><td>cell</td><td>cell</td></tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class=&quot;compact-results-table row-highlighting&quot;&gt;
+    ...
+&lt;/table&gt;
+</pre>
+    
+    <hr id="has-actions-example">
+    
+    <p class="description">
+        <span class="label label-attr">.has-actions</span> is used in conjunction with 
+        <a href="buttons#drop-down-example">drop downs</a>.  It will hide the drop down button until the row is hovered.  It is
+        also used to register right-click events on the row to display the drop down menu.  Do <strong>NOT</strong> use 
+        <span class="label label-attr">.row-highlighting</span> with 
+        <span class="label label-attr">.has-actions</span> because it makes it very hard to notice that a drop down
+        button appeared. 
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="compact-results-table has-actions">
+        <thead><tr><th>header</th><th>header</th></tr></thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr>
+                <td>cell</td>
+                <td>cell
+                    <div class="dropdown-trigger usn clearfix fr">
+                        <a><i class="icon icon-cog m0"></i><i class="icon icon-bullet-arrow-down m0"></i></a>
+                        <ul class="dropdown-menudn" style="display: none;">
+                            <li class="dropdown-option">
+                                <a class="clearfix">
+                                    <i class="icon icon-pencil"></i>
+                                    <span class="dropdown-option-label">Edit</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-option">
+                                <a class="clearfix">
+                                    <i class="icon icon-cross"></i>
+                                    <span class="dropdown-option-label">Delete</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>cell</td>
+                <td>cell
+                    <div class="dropdown-trigger usn clearfix fr">
+                        <a><i class="icon icon-cog m0"></i><i class="icon icon-bullet-arrow-down m0"></i></a>
+                        <ul class="dropdown-menudn" style="display: none;">
+                            <li class="dropdown-option">
+                                <a class="clearfix">
+                                    <i class="icon icon-pencil"></i>
+                                    <span class="dropdown-option-label">Edit</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-option">
+                                <a class="clearfix">
+                                    <i class="icon icon-cross"></i>
+                                    <span class="dropdown-option-label">Delete</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class="compact-results-table has-actions"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;header&lt;/th&gt;
+            &lt;th&gt;header&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;cell&lt;/td&gt;
+            &lt;td&gt;
+                cell
+                &lt;div class="dropdown-trigger usn clearfix fr"&gt;
+                    &lt;a&gt;&lt;i class="icon icon-cog m0"&gt;&lt;/i&gt;&lt;i class="icon icon-bullet-arrow-down m0"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;ul class="dropdown-menudn" style="display: none;"&gt;
+                        &lt;li class="dropdown-option"&gt;
+                            &lt;a class="clearfix"&gt;
+                                &lt;i class="icon icon-pencil"&gt;&lt;/i&gt;
+                                &lt;span class="dropdown-option-label"&gt;Edit&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="dropdown-option"&gt;
+                            &lt;a class="clearfix"&gt;
+                                &lt;i class="icon icon-cross"&gt;&lt;/i&gt;
+                                &lt;span class="dropdown-option-label"&gt;Delete&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;cell&lt;/td&gt;
+            &lt;td&gt;
+                cell
+                &lt;div class="dropdown-trigger usn clearfix fr"&gt;
+                    &lt;a&gt;&lt;i class="icon icon-cog m0"&gt;&lt;/i&gt;&lt;i class="icon icon-bullet-arrow-down m0"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;ul class="dropdown-menudn" style="display: none;"&gt;
+                        &lt;li class="dropdown-option"&gt;
+                            &lt;a class="clearfix"&gt;
+                                &lt;i class="icon icon-pencil"&gt;&lt;/i&gt;
+                                &lt;span class="dropdown-option-label"&gt;Edit&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="dropdown-option"&gt;
+                            &lt;a class="clearfix"&gt;
+                                &lt;i class="icon icon-cross"&gt;&lt;/i&gt;
+                                &lt;span class="dropdown-option-label"&gt;Delete&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+    <hr>
+    
+    <p class="description">
+        <span class="label label-attr">.has-alerts</span> is used when each row in a table is expected to have the first
+        column be an icon describing the row.  It will ensure the first column only takes up enough space to show the icon. See
+        <a href="icons">icons</a> to learn more about using icons.
+    </p>
+    <h4 class="subtle">Example:</h4>
+    <table class="compact-results-table has-alerts">
+        <thead><tr><th colspan="2">Issues</th></tr></thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr>
+                <td><i class="icon icon-error"></i></td>
+                <td>High kVAr measured at substation Winthrop.</td>
+            </tr>
+            <tr>
+                <td><i class="icon icon-exclamation"></i></td>
+                <td>High Voltage measured at substation Alberta.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 class="subtle">Code:</h4>
+<pre class="code prettyprint">
+&lt;table class="compact-results-table has-alerts"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th colspan="2"&gt;Issues&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;i class="icon icon-error"&gt;&lt;/i&gt;&lt;/td&gt;
+            &lt;td&gt;High kVAr measured at substation Winthrop.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;i class="icon icon-exclamation"&gt;&lt;/i&gt;&lt;/td&gt;
+            &lt;td&gt;High Voltage measured at substation Alberta.&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
 <% include footer %>
