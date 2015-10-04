@@ -20,7 +20,11 @@
    Button
    ============================================================ */
 
-button, .button, input[type=submit], input[type=button], input[type=reset] {
+button, 
+.button, 
+input[type=submit], 
+input[type=button], 
+input[type=reset] {
     background-color: #f3f3f3;
     border: solid 1px #bbb;
     border-radius: 2px;
@@ -41,7 +45,10 @@ button, .button, input[type=submit], input[type=button], input[type=reset] {
     &:focus { outline: none; }
 }
 
-button .icon, .button .icon { margin: 0; }
+button .icon, .button .icon { 
+    float: left;
+    margin: 0; 
+}
 
 
 
@@ -59,7 +66,7 @@ button[disabled] .ui-button-text,
 }
 
 button[disabled] .icon, .button[disabled] .icon {
-    background-image: url(../Icons/icons-disabled.png);
+    background-image: url(/img/icons-disabled.png); 
 }
 
 button.action[disabled], .button.action[disabled] {
@@ -152,7 +159,7 @@ button.action:hover, .button.action:hover {
 }
 
 button.blue, .button.blue {
-    background-color: #4B8DF8;
+    background-color: #4b8df8;
     border: 1px solid #3079ed !important;
     transition: border .20s;
 }
@@ -171,7 +178,7 @@ button.green, .button.green {
     transition: border .20s;
 }
 button.green:hover, .button.green:hover {
-    background-color: #3f83f1;
+    background-color: #348000;
     border: 1px solid #2d6200 !important;
 }
 button.green:active, .button.green:active,
@@ -185,7 +192,7 @@ button.red, .button.red {
     transition: border .20s;
 }
 button.red:hover, .button.red:hover {
-    background-color: #d14130;
+    background-color: #c14232;
     border: 1px solid #b0281a !important;
 }
 button.red:active, .button.red:active,
@@ -199,7 +206,7 @@ button.orange, .button.orange {
     transition: border .20s;
 }
 button.orange:hover, .button.orange:hover {
-    background-color: #ff9900;
+    background-color: #e68a00;
     border: 1px solid #ef8900 !important;
 }
 button.orange:active, .button.orange:active,
@@ -207,17 +214,17 @@ button.orange:focus, .button.orange:focus {
     border-color: #ef8900 !important;
 }
 
-button.grey, .button.grey {
+button.gray, .button.gray {
     background-color: #777;
     border: 1px solid #666 !important;
     transition: border .20s;
 }
-button.grey:hover, .button.grey:hover {
-    background-color: #777;
+button.gray:hover, .button.gray:hover {
+    background-color: #6b6b6b;
     border: 1px solid #666 !important;
 }
-button.grey:active, .button.grey:active,
-button.grey:focus, .button.grey:focus {
+button.gray:active, .button.gray:active,
+button.gray:focus, .button.gray:focus {
     border-color: #666 !important;
 }
 
@@ -281,8 +288,8 @@ button.orange .ui-button-text, .button.orange .ui-button-text {
     color: #fff !important;
     text-shadow: 0 1px 0 #ef8900 !important;
 }
-button.grey .b-label, .button.grey .b-label,
-button.grey .ui-button-text, .button.grey .ui-button-text {
+button.gray .b-label, .button.gray .b-label,
+button.gray .ui-button-text, .button.gray .ui-button-text {
     color: #fff !important;
     text-shadow: 0 1px 0 #777 !important;
 }
@@ -296,25 +303,25 @@ button.blue:active .b-label,
 button.green:active .b-label, 
 button.red:active .b-label, 
 button.orange:active .b-label, 
-button.grey:active .b-label, 
+button.gray:active .b-label, 
 button.primary:active .b-label, 
 button.blue:active .ui-button-text, 
 button.green:active .ui-button-text, 
 button.red:active .ui-button-text, 
 button.orange:active .ui-button-text, 
-button.grey:active .ui-button-text, 
+button.gray:active .ui-button-text, 
 button.primary:active .ui-button-text, 
 .button.blue:active .b-label, 
 .button.green:active .b-label, 
 .button.red:active .b-label, 
 .button.orange:active .b-label, 
-.button.grey:active .b-label,
+.button.gray:active .b-label,
 .button.primary:active .b-label,
 .button.blue:active .ui-button-text, 
 .button.green:active .ui-button-text, 
 .button.red:active .ui-button-text, 
 .button.orange:active .ui-button-text, 
-.button.grey:active .ui-button-text,
+.button.gray:active .ui-button-text,
 .button.primary:active .ui-button-text {
     color: #fff !important;
 }

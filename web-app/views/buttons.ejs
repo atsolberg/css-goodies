@@ -1,3 +1,315 @@
 <% include header %>
 <h1>Buttons</h1>
+
+<h2>Normal Buttons</h2>
+<div>
+    <button class="button">
+        <span class="b-label">A Button</span>
+    </button>
+    <button class="button" disabled>
+        <span class="b-label">A Disabled Button</span>
+    </button>
+</div>
+<pre class="code prettyprint">
+&lt;button class="button"&gt;
+    &lt;span class="b-label"&gt;A Button&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button" disabled&gt;
+    &lt;span class="b-label"&gt;A Disabled Button&lt;/span&gt;
+&lt;/button&gt;
+</pre>
+
+<h2>Action Buttons</h2>
+<div>
+    <button class="button action primary">
+        <span class="b-label">Primary</span>
+    </button>
+    <button class="button action primary" disabled>
+        <span class="b-label">Primary Disabled</span>
+    </button>
+    <button class="button action blue">
+        <span class="b-label">Blue</span>
+    </button>
+    <button class="button action green">
+        <span class="b-label">Green</span>
+    </button>
+    <button class="button action red">
+        <span class="b-label">Red</span>
+    </button>
+    <button class="button action orange">
+        <span class="b-label">Orange</span>
+    </button>
+    <button class="button action gray">
+        <span class="b-label">Gray</span>
+    </button>
+</div>
+<pre class="code prettyprint">
+&lt;button class="button action primary"&gt;
+    &lt;span class="b-label"&gt;Primary&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button action primary" disabled&gt;
+    &lt;span class="b-label"&gt;Primary Disabled&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button action blue"&gt;
+    &lt;span class="b-label"&gt;Blue&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button action green"&gt;
+    &lt;span class="b-label"&gt;Green&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button action red"&gt;
+    &lt;span class="b-label"&gt;Red&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button action orange"&gt;
+    &lt;span class="b-label"&gt;Orange&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button action gray"&gt;
+    &lt;span class="b-label"&gt;Gray&lt;/span&gt;
+&lt;/button&gt;
+</pre>
+
+<h2>Buttons with Icons</h2>
+<div>
+    <button class="button">
+        <i class="icon icon-pencil"></i>
+        <span class="b-label">Edit</span>
+    </button>
+    <button class="button" disabled>
+        <i class="icon icon-pencil"></i>
+        <span class="b-label">Edit</span>
+    </button>
+    <button class="button">
+        <i class="icon icon-cross"></i>
+    </button>
+</div>
+<pre class="code prettyprint">
+&lt;button class="button"&gt;
+    &lt;i class="icon icon-pencil"&gt;&lt;/i&gt;
+    &lt;span class="b-label"&gt;Edit&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button" disabled&gt;
+    &lt;i class="icon icon-pencil"&gt;&lt;/i&gt;
+    &lt;span class="b-label"&gt;Edit&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button"&gt;
+    &lt;i class="icon icon-cross"&gt;&lt;/i&gt;
+&lt;/button&gt;
+</pre>
+
+<h2>Button Groups</h2>
+<div>
+    <div class="button-group stacked">
+        <button class="button"><i class="icon icon-box"></i></button
+        ><button class="button"><i class="icon icon-flag-red"></i></button
+        ><button class="button"><i class="icon icon-bin"></i></button>
+    </div>
+    <div class="button-group stacked">
+        <button class="button"><i class="icon icon-resultset-first-gray"></i></button
+        ><button class="button"><i class="icon icon-resultset-previous-gray"></i></button
+        ><button class="button"><span class="b-label">1</span></button
+        ><button class="button"><span class="b-label">2</span></button
+        ><button class="button"><span class="b-label">3</span></button
+        ><button class="button"><span class="b-label">4</span></button
+        ><button class="button"><span class="b-label">5</span></button
+        ><button class="button"><i class="icon icon-resultset-next-gray"></i></button
+        ><button class="button"><i class="icon icon-resultset-last-gray"></i></button>
+    </div>
+    <div class="clearfix">
+        <button class="button left">
+            <i class="icon icon-transmit-blue"></i>
+            <span class="b-label">Activate</span>
+        </button
+        ><button class="button middle">
+            <i class="icon icon-transmit"></i>
+            <span class="b-label">Deactivate</span>
+        </button
+        ><button class="button right">
+            <i class="icon icon-transmit-delete"></i>
+            <span class="b-label">Disabled</span>
+        </button>
+    </div>
+</div>
+<pre class="code prettyprint">
+&lt;div class="button-group stacked"&gt;
+    &lt;button class="button"&gt;&lt;i class="icon icon-box"&gt;&lt;/i&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;i class="icon icon-flag-red"&gt;&lt;/i&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;i class="icon icon-bin"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="button-group stacked"&gt;
+    &lt;button class="button"&gt;&lt;i class="icon icon-resultset-first-gray"&gt;&lt;/i&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;i class="icon icon-resultset-previous-gray"&gt;&lt;/i&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;span class="b-label"&gt;1&lt;/span&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;span class="b-label"&gt;2&lt;/span&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;span class="b-label"&gt;3&lt;/span&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;span class="b-label"&gt;4&lt;/span&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;span class="b-label"&gt;5&lt;/span&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;i class="icon icon-resultset-next-gray"&gt;&lt;/i&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;i class="icon icon-resultset-last-gray"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="clearfix"&gt;
+    &lt;button class="button left"&gt;
+        &lt;i class="icon icon-transmit-blue"&gt;&lt;/i&gt;
+        &lt;span class="b-label"&gt;Activate&lt;/span&gt;
+    &lt;/button
+    &gt;&lt;button class="button middle"&gt;
+        &lt;i class="icon icon-transmit"&gt;&lt;/i&gt;
+        &lt;span class="b-label"&gt;Deactivate&lt;/span&gt;
+    &lt;/button
+    &gt;&lt;button class="button right"&gt;
+        &lt;i class="icon icon-transmit-delete"&gt;&lt;/i&gt;
+        &lt;span class="b-label"&gt;Disabled&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+<h2>Toggle Buttons</h2>
+<p>Toggle a button on with the <span class="label label-attr">.on</span> class.</p>
+<div>
+    <div class="button-group button-group-toggle">
+        <button class="button"><i class="icon icon-text-align-left"></i></button
+        ><button class="button on"><i class="icon icon-text-align-center"></i></button
+        ><button class="button"><i class="icon icon-text-align-justify"></i></button
+        ><button class="button"><i class="icon icon-text-align-right"></i></button>
+    </div>
+</div>
+<pre class="code prettyprint">
+&lt;div class="button-group button-group-toggle"&gt;
+    &lt;button class="button"&gt;&lt;i class="icon icon-text-align-left"&gt;&lt;/i&gt;&lt;/button
+    &gt;&lt;button class="button on"&gt;&lt;i class="icon icon-text-align-center"&gt;&lt;/i&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;i class="icon icon-text-align-justify"&gt;&lt;/i&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;i class="icon icon-text-align-right"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+<p>Show a little more visual state by adding the .yes or .no classes to the buttons.</p>
+<div>
+    <div class="button-group button-group-toggle">
+        <button class="button yes on"><span class="b-label">On</span></button
+        ><button class="button no"><span class="b-label">Off</span></button>
+    </div>
+    <div class="button-group button-group-toggle">
+        <button class="button yes"><span class="b-label">Activated</span></button
+        ><button class="button"><span class="b-label">Deactivated</span></button
+        ><button class="button no on"><span class="b-label">Disabled</span></button>
+    </div>
+</div>
+<pre class="code prettyprint">
+&lt;div class="button-group button-group-toggle"&gt;
+    &lt;button class="button yes on"&gt;&lt;span class="b-label"&gt;On&lt;/span&gt;&lt;/button
+    &gt;&lt;button class="button no"&gt;&lt;span class="b-label"&gt;Off&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="button-group button-group-toggle"&gt;
+    &lt;button class="button yes"&gt;&lt;span class="b-label"&gt;Activated&lt;/span&gt;&lt;/button
+    &gt;&lt;button class="button"&gt;&lt;span class="b-label"&gt;Deactivated&lt;/span&gt;&lt;/button
+    &gt;&lt;button class="button no on"&gt;&lt;span class="b-label"&gt;Disabled&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+<h2>Radio Buttons</h2>
+<p>Toggle buttons that are actually radio inputs.</p>
+<div>
+    <label class="radio-btn">
+        <input type="radio" name="pet" value="cats" data-toggle checked>
+        <span class="button left"><span class="b-label">Cats</span></span>
+    </label
+    ><label class="radio-btn">
+        <input type="radio" name="pet" value="dogs" data-toggle>
+        <span class="button right"><span class="b-label">Dogs</span></span>
+    </label>
+
+    <div class="button-group">
+        <label class="radio-btn">
+            <input type="radio" name="sex" value="M" data-toggle checked>
+            <span class="button"><span class="b-label">Male</span></span>
+        </label
+        ><label class="radio-btn">
+            <input type="radio" name="sex" value="F" data-toggle>
+            <span class="button"><span class="b-label">Female</span></span>
+        </label>
+    </div>
+
+    <label class="radio-btn">
+        <input type="radio" name="vehicle" value="train" data-toggle>
+        <span class="button left"><span class="b-label">Train</span></span>
+    </label
+    ><label class="radio-btn">
+        <input type="radio" name="vehicle" value="car" data-toggle checked>
+        <span class="button middle"><span class="b-label">Car</span></span>
+    </label
+    ><label class="radio-btn">
+        <input type="radio" name="vehicle" value="jetski" data-toggle disabled>
+        <span class="button middle"><span class="b-label">JetSki</span></span>
+    </label
+    ><label class="radio-btn">
+        <input type="radio" name="vehicle" value="airplane" data-toggle>
+        <span class="button right"><span class="b-label">Airplane</span></span>
+    </label>
+
+    <form class="buffered">
+        <label class="radio-btn">
+            <input name="phase" type="radio" value="A">
+            <span class="button left"><span class="b-label">A</span></span>
+        </label
+        ><label class="radio-btn">
+            <input name="phase" type="radio" value="B" checked="checked">
+            <span class="button middle"><span class="b-label">B</span></span>
+        </label
+        ><label class="radio-btn">
+            <input name="phase" type="radio" value="C">
+            <span class="button right"><span class="b-label">C</span></span>
+        </label>
+    </form>
+</div>
+<pre class="code prettyprint">
+&lt;label class="radio-btn"&gt;
+    &lt;input type="radio" name="pet" value="cats" data-toggle checked&gt;
+    &lt;span class="button left"&gt;&lt;span class="b-label"&gt;Cats&lt;/span&gt;&lt;/span&gt;
+&lt;/label
+&gt;&lt;label class="radio-btn"&gt;
+    &lt;input type="radio" name="pet" value="dogs" data-toggle&gt;
+    &lt;span class="button right"&gt;&lt;span class="b-label"&gt;Dogs&lt;/span&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;div class="button-group"&gt;
+    &lt;label class="radio-btn"&gt;
+        &lt;input type="radio" name="sex" value="M" data-toggle checked&gt;
+        &lt;span class="button"&gt;&lt;span class="b-label"&gt;Male&lt;/span&gt;&lt;/span&gt;
+    &lt;/label
+    &gt;&lt;label class="radio-btn"&gt;
+        &lt;input type="radio" name="sex" value="F" data-toggle&gt;
+        &lt;span class="button"&gt;&lt;span class="b-label"&gt;Female&lt;/span&gt;&lt;/span&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;label class="radio-btn"&gt;
+    &lt;input type="radio" name="vehicle" value="train" data-toggle&gt;
+    &lt;span class="button left"&gt;&lt;span class="b-label"&gt;Train&lt;/span&gt;&lt;/span&gt;
+&lt;/label
+&gt;&lt;label class="radio-btn"&gt;
+    &lt;input type="radio" name="vehicle" value="car" data-toggle checked&gt;
+    &lt;span class="button middle"&gt;&lt;span class="b-label"&gt;Car&lt;/span&gt;&lt;/span&gt;
+&lt;/label
+&gt;&lt;label class="radio-btn"&gt;
+    &lt;input type="radio" name="vehicle" value="jetski" data-toggle disabled&gt;
+    &lt;span class="button middle"&gt;&lt;span class="b-label"&gt;JetSki&lt;/span&gt;&lt;/span&gt;
+&lt;/label
+&gt;&lt;label class="radio-btn"&gt;
+    &lt;input type="radio" name="vehicle" value="airplane" data-toggle&gt;
+    &lt;span class="button right"&gt;&lt;span class="b-label"&gt;Airplane&lt;/span&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;form class="buffered"&gt;
+    &lt;label class="radio-btn"&gt;
+        &lt;input name="phase" type="radio" value="A"&gt;
+        &lt;span class="button left"&gt;&lt;span class="b-label"&gt;A&lt;/span&gt;&lt;/span&gt;
+    &lt;/label
+    &gt;&lt;label class="radio-btn"&gt;
+        &lt;input name="phase" type="radio" value="B" checked="checked"&gt;
+        &lt;span class="button middle"&gt;&lt;span class="b-label"&gt;B&lt;/span&gt;&lt;/span&gt;
+    &lt;/label
+    &gt;&lt;label class="radio-btn"&gt;
+        &lt;input name="phase" type="radio" value="C"&gt;
+        &lt;span class="button right"&gt;&lt;span class="b-label"&gt;C&lt;/span&gt;&lt;/span&gt;
+    &lt;/label&gt;
+&lt;/form&gt;
+</pre>
+
 <% include footer %>

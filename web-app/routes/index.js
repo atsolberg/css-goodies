@@ -1,5 +1,6 @@
 var express = require('express'),
-    assign = require('object-assign');
+    assign = require('object-assign'),
+    fs = require('fs'),
     router = express.Router(),
     modelDefaults = {
         title: 'CSS Goodies'
@@ -37,8 +38,33 @@ router.get('/containers', function(req, res, next) {
 
 /* GET icons page. */
 router.get('/icons', function(req, res, next) {
-    var model = assign({}, modelDefaults, { nav: 'icons' });
-    res.render('icons', model);
+    res.render('icons', assign({}, modelDefaults, { nav: 'icons' }));
+});
+/* GET icons data. */
+router.get('/icons.json', function(req, res, next) {
+    
+    var chunk = function(arr, chunkSize) {
+        var groups = [], i;
+        for (i = 0; i < arr.length; i += chunkSize) {
+            groups.push(arr.slice(i, i + chunkSize));
+        }
+        return groups;
+    },
+    rules = [], lines;
+
+    lines = fs.readFileSync('../less/icons.less', 'utf8').split('\n');
+    lines.forEach(function(line) {
+        var classEnd;
+        if (line.indexOf('icon-') !== -1) {
+            classEnd = line.indexOf('{');
+            if (classEnd !== -1) {
+                rules.push(line.substring(1, classEnd -1));
+            }
+        }
+    });
+
+    rules = chunk(rules, 4);
+    res.json(rules);
 });
 
 /* GET buttons page. */
